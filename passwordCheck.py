@@ -3,6 +3,7 @@
 # Name: passwordCheck.py
 # Date: 7/8/2017
 # Revision: 1.0
+#           1.1 Fixed typo in special character function.  Was \d is now \W
 ################################################################################
 
 Automate the Boring Stuff: Chapter 7, Project 1
@@ -80,7 +81,7 @@ def checkNumbers(password):
 
 def checkSpecial(password):
 
-    specCheck = re.compile(r'\d')
+    specCheck = re.compile(r'[\W_]')
 
     if specCheck.search(password):
 
